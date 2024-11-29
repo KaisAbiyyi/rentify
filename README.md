@@ -114,20 +114,10 @@ DB_PASSWORD=
 - **Admin**: Manage vehicles, users, rentals, payments, and maintenance logs.
 - **Customers**: Rent vehicles, make payments, and view rental history.
 
-## Contribution
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (`feature/your-feature-name`).
-3. Commit your changes with clear messages.
-4. Push to your forked repository.
-5. Submit a pull request.
-
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ## Contact
 
-For questions or support, please contact [your-email@example.com].
+For questions or support, please contact [kaisabiyy2@gmail.com].
