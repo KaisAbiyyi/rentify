@@ -120,4 +120,4 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 
 ## Contact
 
-For questions or support, please contact [kaisabiyy2@gmail.com].
+For questions or support, please contact [kaisabiyyi2@gmail.com].
