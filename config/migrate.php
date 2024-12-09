@@ -7,6 +7,8 @@ $db = (new Database())->connect();
 
 // Tambahkan migration secara manual dengan urutan yang benar
 require_once 'config/migrations/UserMigration.php';
+require_once 'config/migrations/CarCategoriesMigration.php';
+require_once 'config/migrations/ManufacturerMigration.php';
 require_once 'config/migrations/CarMigration.php';
 require_once 'config/migrations/RentalMigration.php';
 require_once 'config/migrations/RentalDetailMigration.php';
@@ -17,6 +19,8 @@ require_once 'config/migrations/CarMaintenanceMigration.php';
 // Buat instance migration sesuai urutan
 $migrations = [
     new UserMigration($db),
+    new CarCategoriesMigration($db),
+    new ManufacturerMigration($db),
     new CarMigration($db),
     new RentalMigration($db),
     new RentalDetailMigration($db),

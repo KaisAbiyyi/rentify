@@ -18,7 +18,7 @@ ob_start(); // Mulai buffer output
                     type="search"
                     name="search"
                     id="search"
-                    class="border rounded-full w-5/6 border-slate-400 px-6 py-2 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900 transition duration-200"
+                    class="border rounded-full text-slate-900 w-5/6 border-slate-400 px-6 py-2 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900 transition duration-200"
                     placeholder="Find your dream car...">
                 <button
                     type="submit"

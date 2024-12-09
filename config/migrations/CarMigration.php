@@ -12,17 +12,21 @@ class CarMigration
     public function up()
     {
         $query = "
-        CREATE TABLE IF NOT EXISTS cars (
+       CREATE TABLE IF NOT EXISTS cars (
             id INT AUTO_INCREMENT PRIMARY KEY,
+            manufacturer_id INT NOT NULL,
+            category_id INT NOT NULL,
             brand VARCHAR(100) NOT NULL,
             model VARCHAR(100) NOT NULL,
             year INT NOT NULL,
-            color VARCHAR(50),
+            color VARCHAR(50) DEFAULT NULL,
             daily_rate DECIMAL(10, 2) NOT NULL,
             status ENUM('available', 'rented', 'maintenance') DEFAULT 'available',
             license_plate VARCHAR(50) UNIQUE NOT NULL,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+            FOREIGN KEY (manufacturer_id) REFERENCES manufacturers(id),
+            FOREIGN KEY (category_id) REFERENCES car_categories(id)
         );
         ";
 
