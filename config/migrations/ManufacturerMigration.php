@@ -1,12 +1,12 @@
 <?php
 
-class ManufacturersMigration
+class ManufacturerMigration
 {
-    private $db;
+    private $pdo;
 
-    public function __construct($db)
+    public function __construct($pdo)
     {
-        $this->db = $db;
+        $this->pdo = $pdo;
     }
 
     public function up()
@@ -21,10 +21,10 @@ class ManufacturersMigration
             updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
         )";
 
-        if ($this->db->query($sql)) {
+        if ($this->pdo->query($sql)) {
             echo "Table 'manufacturers' created successfully.\n";
         } else {
-            echo "Error creating table 'manufacturers': " . $this->db->error . "\n";
+            echo "Error creating table 'manufacturers': " . $this->pdo->error . "\n";
         }
     }
 
@@ -32,10 +32,10 @@ class ManufacturersMigration
     {
         $sql = "DROP TABLE IF EXISTS manufacturers";
 
-        if ($this->db->query($sql)) {
+        if ($this->pdo->query($sql)) {
             echo "Table 'manufacturers' dropped successfully.\n";
         } else {
-            echo "Error dropping table 'manufacturers': " . $this->db->error . "\n";
+            echo "Error dropping table 'manufacturers': " . $this->pdo->error . "\n";
         }
     }
 }

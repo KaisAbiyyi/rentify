@@ -34,23 +34,9 @@ ob_start(); // Mulai buffer output
 
     <!-- Features Section -->
     <section class="container mx-auto my-20">
-        <h2 class="text-3xl font-bold text-center mb-10">Why Choose Rentify?</h2>
+        <h2 class="text-3xl font-bold mb-10">MANUFACTURERS</h2>
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-                <div class="text-blue-600 text-5xl mb-4">🚗</div>
-                <h3 class="text-xl font-semibold mb-2">Wide Car Selection</h3>
-                <p class="text-gray-600">Choose from a variety of cars to suit your needs, from economy to luxury.</p>
-            </div>
-            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-                <div class="text-green-600 text-5xl mb-4">💰</div>
-                <h3 class="text-xl font-semibold mb-2">Affordable Prices</h3>
-                <p class="text-gray-600">Enjoy competitive rates without compromising on quality and service.</p>
-            </div>
-            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-                <div class="text-yellow-500 text-5xl mb-4">⭐</div>
-                <h3 class="text-xl font-semibold mb-2">Top-rated Service</h3>
-                <p class="text-gray-600">Experience excellent customer support from booking to return.</p>
-            </div>
+           
         </div>
     </section>
 

@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $title ?? 'Rentify'; ?></title>
+
+    <!-- Favicon (Icon Tab) -->
+    <link rel="icon" type="image/png" href="/public/images/logo.png">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         const navbar = document.getElementById("navbar");
         const navbarTitle = document.getElementById("navbar-title");
@@ -22,7 +28,6 @@
             }
         });
     </script>
-
 </head>
 
 <body class="bg-gray-100">
