@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Rentify Simulation Studio
+
+Rentify is a showcase-ready rental car platform simulation that proves your team can ship complex fleet operations and customer experiences. The app guides prospects through an operator-first onboarding before unlocking the customer storefront, highlighting how quickly you can launch a full rental ecosystem.
+
+### Highlights
+
+- **Dual personas** – Dedicated route groups for admin (`/admin`) and customer (`/customer`) experiences with unique layouts and storytelling.
+- **Shadcn-powered admin shell** – Responsive sidebar navigation, top controls, and polished dashboards built with `sidebar`, `card`, `badge`, and `button` components.
+- **Guided narrative** – The landing page funnels visitors into the admin onboarding flow, then invites them to try the customer journey.
+- **Tailwind CSS v4** – Modern theming with inline CSS variables for rapid customization.
 
 ## Getting Started
 
-First, run the development server:
+All scripts use [Bun](https://bun.sh/).
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit <http://localhost:3000> and begin with the **Get Started** CTA to enter the admin onboarding tour. After completing the admin path, jump into `/customer` to explore the renter-facing sandbox.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/app
+├─ (customer)          # Customer-facing shell with navbar
+│  ├─ layout.tsx
+│  ├─ page.tsx         # Landing / marketing narrative
+│  └─ customer/page.tsx# Customer sandbox experience
+└─ (admin)             # Admin portal with shadcn sidebar
+	└─ admin
+		├─ layout.tsx    # Sidebar + header wrapper
+		├─ page.tsx      # Operations overview dashboard
+		├─ bookings/page.tsx
+		├─ fleet/page.tsx
+		├─ insights/page.tsx
+		└─ onboarding/page.tsx
+```
 
-## Learn More
+Shared UI primitives live under `src/components/ui`, generated through `bunx shadcn@latest add ...` for consistency.
 
-To learn more about Next.js, take a look at the following resources:
+## Demo Flow
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Landing page** – Position the simulation, review capabilities, and trigger the admin tour via **Get Started**.
+2. **Admin onboarding** – Complete the three-card checklist to configure fleet presets, business rules, and customer storytelling.
+3. **Admin control center** – Navigate the sidebar to inspect overview metrics, bookings queue, fleet maintenance, and insights cards.
+4. **Customer sandbox** – Switch roles with one click to showcase live inventory cards synchronized with admin logic.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Testing and QA
 
-## Deploy on Vercel
+- Run a production build: `bun run build`
+- After adding features, execute an end-to-end walkthrough with the `#playwright` MCP to capture screenshots and validate the user journey.
+- If a technology choice is unclear, reach for `#context7` documentation before coding.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Create a feature branch per todo entry (`todo.md` tracks branch names and identifiers).
+2. Use `bunx shadcn@latest add -name <component>` for UI scaffolding.
+3. Keep the visual polish tight—adjust spacing, typography, and states so the demo stays presentation-ready.
+
+## License
+
+This project is released under the MIT License. See [`LICENSE`](./LICENSE) for details.
